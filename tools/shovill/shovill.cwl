@@ -10,11 +10,19 @@ inputs:
     type: File
   - id: reads2
     type: File
-  - id: outdir
-    type: Directory
 outputs:
-  - id: output
-    type: Directory?
+  - id: contigs
+    type: File?
+    outputBinding:
+      glob: shovill_output/contigs.fa
+  - id: contig-graph
+    type: File?
+    outputBinding:
+      glob: shovill_output/contigs.gfa
+  - id: log
+    type: File?
+    outputBinding:
+      glob: shovill_output/shovill.log
 label: shovill
 arguments:
   - position: 0
@@ -24,7 +32,12 @@ arguments:
     prefix: '--R2'
     valueFrom: $(inputs.reads2.path)
   - position: 0
+    prefix: '--ram'
+    valueFrom: '8'
+  - position: 0
     prefix: '--outdir'
-    valueFrom: $(inputs.outdir.path)
+    valueFrom: shovill_output
 requirements:
+  - class: DockerRequirement
+    dockerPull: 'quay.io/biocontainers/shovill:1.0.1--0'
   - class: InlineJavascriptRequirement
