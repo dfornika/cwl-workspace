@@ -13,10 +13,12 @@ inputs:
   - id: reference
     type: File
   - id: output
-    type: string?
+    type: string
 outputs:
   - id: quast_output
-    type: File?
+    type: Directory
+    outputBinding:
+      glob: $(inputs.output)
 label: quast
 arguments:
   - position: 1
@@ -24,8 +26,8 @@ arguments:
     valueFrom: $(inputs.reference.path)
   - position: 2
     prefix: '-o'
-    valueFrom: $(inputs.output.path)
+    valueFrom: $(inputs.output)
 requirements:
   - class: DockerRequirement
-    dockerPull: 'quay.io/biocontainers/quast:4.6.3--py27pl526h3727419_2'
+    dockerPull: 'quay.io/biocontainers/quast:5.0.0--py27pl526ha92aebf_1'
   - class: InlineJavascriptRequirement
