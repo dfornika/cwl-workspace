@@ -38,6 +38,9 @@ arguments:
     prefix: '--outdir'
     valueFrom: shovill_output
 requirements:
+  - class: ResourceRequirement
+    ramMin: 8
+    coresMin: 8
   - class: DockerRequirement
     dockerPull: 'quay.io/biocontainers/shovill:1.0.1--0'
   - class: InlineJavascriptRequirement
