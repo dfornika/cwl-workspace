@@ -8,35 +8,35 @@ baseCommand:
 inputs:
   - id: reads1
     type: File
+    inputBinding:
+      position: 0
+      prefix: '--R1'
   - id: reads2
     type: File
+    inputBinding:
+      position: 0
+      prefix: '--R2'
 outputs:
   - id: contigs
     type: File?
     outputBinding:
-      glob: shovill_output/contigs.fa
+      glob: output/contigs.fa
   - id: contig-graph
     type: File?
     outputBinding:
-      glob: shovill_output/contigs.gfa
+      glob: output/contigs.gfa
   - id: log
     type: File?
     outputBinding:
-      glob: shovill_output/shovill.log
+      glob: output/shovill.log
 label: shovill
 arguments:
-  - position: 0
-    prefix: '--R1'
-    valueFrom: $(inputs.reads1.path)
-  - position: 0
-    prefix: '--R2'
-    valueFrom: $(inputs.reads2.path)
   - position: 0
     prefix: '--ram'
     valueFrom: '8'
   - position: 0
     prefix: '--outdir'
-    valueFrom: shovill_output
+    valueFrom: output
 requirements:
   - class: ResourceRequirement
     ramMin: 8

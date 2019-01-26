@@ -6,28 +6,29 @@ id: quast
 baseCommand:
   - quast
 inputs:
-  - id: contig
-    type: File
+  - id: contigs
+    type:
+      - File
+      - type: array
+        items: File
+    inputBinding:
+      position: 1
+  - id: reference
+    type: File?
     inputBinding:
       position: 0
-  - id: reference
-    type: File
-  - id: output
-    type: string
+      prefix: '-r'
 outputs:
-  - id: quast_output
+  - id: output
     type: Directory
     outputBinding:
-      glob: $(inputs.output)
+      glob: output
 label: quast
 arguments:
   - position: 1
-    prefix: '-R'
-    valueFrom: $(inputs.reference.path)
-  - position: 2
     prefix: '-o'
-    valueFrom: $(inputs.output)
+    valueFrom: output
 requirements:
   - class: DockerRequirement
-    dockerPull: 'quay.io/biocontainers/quast:5.0.0--py27pl526ha92aebf_1'
+    dockerPull: 'quay.io/biocontainers/quast:5.0.2--py35pl526ha92aebf_0'
   - class: InlineJavascriptRequirement
