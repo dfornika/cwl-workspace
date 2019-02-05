@@ -2,9 +2,9 @@ class: CommandLineTool
 cwlVersion: v1.0
 $namespaces:
   sbg: 'https://www.sevenbridges.com/'
-id: mlst
+id: abricate
 baseCommand:
-  - mlst
+  - abricate
 inputs:
   - id: input
     type: File
@@ -15,8 +15,8 @@ outputs:
     type: File?
     outputBinding:
       glob: output
-label: mlst
+label: abricate
 requirements:
   - class: DockerRequirement
-    dockerPull: 'quay.io/biocontainers/mlst:2.16.1--0'
+    dockerPull: 'quay.io/biocontainers/abricate:0.8.10--h1341992_0'
 stdout: output
