@@ -13,21 +13,22 @@ inputs:
         items: File
     inputBinding:
       position: 1
-  - id: output
-    type: string?
-    inputBinding:
-      position: 0
-      prefix: '-o'
 outputs:
-  - id: output_dir
+  - id: output
     type: Directory?
     outputBinding:
       glob: output
 label: fastqc
+arguments:
+  - position: 0
+    prefix: '-o'
+    valueFrom: output
 requirements:
   - class: DockerRequirement
     dockerPull: 'quay.io/biocontainers/fastqc:0.11.8--1'
   - class: InitialWorkDirRequirement
     listing:
-      - $(inputs.output)
+      - entryname: output
+        entry: '$({class: ''Directory''})'
+        writable: true
   - class: InlineJavascriptRequirement
