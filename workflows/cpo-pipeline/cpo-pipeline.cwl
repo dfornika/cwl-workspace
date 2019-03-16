@@ -53,7 +53,7 @@ steps:
       - id: contigs
       - id: contig-graph
       - id: log
-    run: ../../tools/shovill/shovill.cwl
+    run: https://raw.githubusercontent.com/dfornika/cwl-workspace/master/tools/shovill.cwl
     label: shovill
     'sbg:x': 53
     'sbg:y': 49
@@ -63,7 +63,7 @@ steps:
         source: shovill/contigs
     out:
       - id: output
-    run: ../../tools/mlst/mlst.cwl
+    run: https://raw.githubusercontent.com/dfornika/cwl-workspace/master/tools/mlst.cwl
     label: mlst
     'sbg:x': 311
     'sbg:y': 44
@@ -74,7 +74,7 @@ steps:
           - shovill/contigs
     out:
       - id: output
-    run: ../../tools/quast/quast.cwl
+    run: https://raw.githubusercontent.com/dfornika/cwl-workspace/master/tools/quast.cwl
     label: quast
     'sbg:x': 304
     'sbg:y': -118
@@ -87,7 +87,7 @@ steps:
           - mash_sketch/output
     out:
       - id: output
-    run: ../../tools/mash/mash_dist/mash_dist.cwl
+    run: https://raw.githubusercontent.com/dfornika/cwl-workspace/master/tools/mash/mash_dist/mash_dist.cwl
     label: mash_dist
     'sbg:x': 277.0910949707031
     'sbg:y': 275.7024230957031
@@ -99,7 +99,7 @@ steps:
         source: reads2
     out:
       - id: output
-    run: ../../tools/mash/mash_sketch/mash_sketch.cwl
+    run: https://raw.githubusercontent.com/dfornika/cwl-workspace/master/tools/mash/mash_sketch/mash_sketch.cwl
     label: mash_sketch
     'sbg:x': 50.84105682373047
     'sbg:y': 307.8697814941406
@@ -113,7 +113,7 @@ steps:
         default: true
     out:
       - id: output
-    run: ../../tools/sort/sort.cwl
+    run: https://raw.githubusercontent.com/dfornika/cwl-workspace/master/tools/sort/sort.cwl
     label: sort
     'sbg:x': 408.10113525390625
     'sbg:y': 239.5
@@ -124,7 +124,7 @@ steps:
           - reads1
     out:
       - id: output
-    run: ../../tools/fastqc/fastqc.cwl
+    run: https://raw.githubusercontent.com/dfornika/cwl-workspace/master/tools/fastqc/fastqc.cwl
     label: fastqc
     'sbg:x': -142.27850341796875
     'sbg:y': 493.89923095703125
@@ -135,7 +135,7 @@ steps:
           - reads2
     out:
       - id: output
-    run: ../../tools/fastqc/fastqc.cwl
+    run: https://raw.githubusercontent.com/dfornika/cwl-workspace/master/tools/fastqc/fastqc.cwl
     label: fastqc
     'sbg:x': -56.87505340576172
     'sbg:y': -258.4345703125
