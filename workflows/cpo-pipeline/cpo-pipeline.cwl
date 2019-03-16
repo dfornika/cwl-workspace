@@ -13,7 +13,7 @@ inputs:
     type: File
     'sbg:x': -208.15011596679688
     'sbg:y': 355.6777038574219
-  - id: refseq.genomes.k21.s1000.msh
+  - id: refseq_genomes_k21_s1000_msh
     type: File
     'sbg:x': 188.55628967285156
     'sbg:y': 174.55628967285156
