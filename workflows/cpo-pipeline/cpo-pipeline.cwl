@@ -18,7 +18,7 @@ inputs:
     'sbg:x': 188.55628967285156
     'sbg:y': 174.55628967285156
 outputs:
-  - id: quast
+  - id: quast_output
     outputSource:
       - quast/output
     type: Directory
@@ -53,7 +53,7 @@ steps:
       - id: contigs
       - id: contig-graph
       - id: log
-    run: https://raw.githubusercontent.com/dfornika/cwl-workspace/master/tools/shovill.cwl
+    run: https://raw.githubusercontent.com/dfornika/cwl-workspace/master/tools/shovill/shovill.cwl
     label: shovill
     'sbg:x': 53
     'sbg:y': 49
@@ -63,7 +63,7 @@ steps:
         source: shovill/contigs
     out:
       - id: output
-    run: https://raw.githubusercontent.com/dfornika/cwl-workspace/master/tools/mlst.cwl
+    run: https://raw.githubusercontent.com/dfornika/cwl-workspace/master/tools/mlst/mlst.cwl
     label: mlst
     'sbg:x': 311
     'sbg:y': 44
@@ -74,7 +74,7 @@ steps:
           - shovill/contigs
     out:
       - id: output
-    run: https://raw.githubusercontent.com/dfornika/cwl-workspace/master/tools/quast.cwl
+    run: https://raw.githubusercontent.com/dfornika/cwl-workspace/master/tools/quast/quast.cwl
     label: quast
     'sbg:x': 304
     'sbg:y': -118
