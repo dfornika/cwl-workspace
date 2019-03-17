@@ -19,32 +19,27 @@ inputs:
     'sbg:y': 542.5327758789062
 outputs:
   - id: mlst_output
-    outputSource:
-      - mlst/output
+    outputSource: "mlst/output"
     type: File?
     'sbg:x': 461.10113525390625
     'sbg:y': 48.5
   - id: fastqc_R1_output
-    outputSource:
-      - fastqc/output
+    outputSource: "fastqc/output"
     type: Directory?
     'sbg:x': -146.3594512939453
     'sbg:y': 62.029788970947266
   - id: fastqc_R2_output
-    outputSource:
-      - fastqc_1/output
+    outputSource: "fastqc_1/output"
     type: Directory?
     'sbg:x': -135.0926971435547
     'sbg:y': 325.9505615234375
   - id: quast_output
-    outputSource:
-      - quast/output
+    outputSource: "quast/output"
     type: Directory
     'sbg:x': 445.3739318847656
     'sbg:y': -170.95127868652344
   - id: mash_dist_output
-    outputSource:
-      - head/output
+    outputSource: "head/output"
     type: File?
     'sbg:x': 640.132080078125
     'sbg:y': 315.2724609375
