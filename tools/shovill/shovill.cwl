@@ -33,7 +33,7 @@ label: shovill
 arguments:
   - position: 0
     prefix: '--ram'
-    valueFrom: $(runtime.ram)
+    valueFrom: $(runtime.ram / 1024)
   - position: 0
     prefix: '--outdir'
     valueFrom: outdir
