@@ -2,8 +2,6 @@ class: CommandLineTool
 cwlVersion: v1.0
 $namespaces:
   sbg: 'https://www.sevenbridges.com'
-$schemas:
-- https://schema.org/docs/schema_org_rdfa.html
 id: mash_sketch
 baseCommand:
   - mash
