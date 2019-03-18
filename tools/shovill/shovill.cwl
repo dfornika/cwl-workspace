@@ -39,7 +39,7 @@ arguments:
     valueFrom: outdir
 requirements:
   - class: ResourceRequirement
-    ramMin: 4
+    ramMin: 4096
     coresMin: 8
   - class: DockerRequirement
     dockerPull: 'quay.io/biocontainers/shovill:1.0.1--0'
