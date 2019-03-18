@@ -22,7 +22,7 @@ inputs:
       prefix: '-g'
 outputs:
   - id: output
-    type: File?
+    type: File
 label: sort
 requirements:
   - class: DockerRequirement
