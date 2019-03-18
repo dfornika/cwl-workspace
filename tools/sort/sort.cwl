@@ -7,11 +7,11 @@ baseCommand:
   - sort
 inputs:
   - id: input
-    type: File?
+    type: File
     inputBinding:
       position: 1
   - id: keydef
-    type: string?
+    type: string
     inputBinding:
       position: 0
       prefix: '--key'
