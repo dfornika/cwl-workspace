@@ -48,8 +48,6 @@ steps:
       - id: output
     run: https://raw.githubusercontent.com/dfornika/cwl-workspace/master/tools/mlst/mlst.cwl
     label: mlst
-    'sbg:x': 311
-    'sbg:y': 44
   - id: quast
     in:
       - id: contigs
