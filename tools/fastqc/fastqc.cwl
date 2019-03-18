@@ -7,10 +7,7 @@ baseCommand:
   - fastqc
 inputs:
   - id: input
-    type:
-      - File
-      - type: array
-        items: File
+    type: File
     inputBinding:
       position: 1
 outputs:
