@@ -12,7 +12,7 @@ inputs:
       position: 0
 outputs:
   - id: output
-    type: File?
+    type: File
     outputBinding:
       glob: output
 label: mlst
