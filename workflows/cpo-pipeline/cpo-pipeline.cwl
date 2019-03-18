@@ -14,13 +14,13 @@ inputs:
 outputs:
   - id: mlst_output
     outputSource: "mlst/output"
-    type: File?
+    type: File
   - id: fastqc_R1_output
     outputSource: "fastqc/output"
-    type: Directory?
+    type: Directory
   - id: fastqc_R2_output
     outputSource: "fastqc_1/output"
-    type: Directory?
+    type: Directory
   - id: quast_output
     outputSource: "quast/output"
     type: Directory
