@@ -12,7 +12,7 @@ inputs:
     inputBinding:
       position: 0
   - id: query
-    type: 'File[]'
+    type: File
     inputBinding:
       position: 1
 outputs:
