@@ -2,6 +2,8 @@ class: CommandLineTool
 cwlVersion: v1.0
 $namespaces:
   sbg: 'https://www.sevenbridges.com'
+$schemas:
+- https://schema.org/docs/schema_org_rdfa.html
 id: mash_sketch
 baseCommand:
   - mash
@@ -13,12 +15,12 @@ inputs:
       position: 0
       prefix: '-r'
   - id: R2
-    type: File?
+    type: File
     inputBinding:
       position: 0
 outputs:
   - id: output
-    type: File?
+    type: File
     outputBinding:
       glob: output.msh
 label: mash_sketch
