@@ -26,5 +26,5 @@ outputs:
 label: sort
 requirements:
   - class: DockerRequirement
-    dockerPull: 'alpine:3.9.2'
+    dockerPull: 'bash:5.0.2'
 stdout: output
