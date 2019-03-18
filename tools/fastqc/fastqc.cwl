@@ -12,7 +12,7 @@ inputs:
       position: 1
 outputs:
   - id: output
-    type: Directory?
+    type: Directory
     outputBinding:
       glob: output
 label: fastqc
