@@ -18,15 +18,15 @@ inputs:
       prefix: '--R2'
 outputs:
   - id: contigs
-    type: File?
+    type: File
     outputBinding:
       glob: outdir/contigs.fa
   - id: contig-graph
-    type: File?
+    type: File
     outputBinding:
       glob: outdir/contigs.gfa
   - id: log
-    type: File?
+    type: File
     outputBinding:
       glob: outdir/shovill.log
 label: shovill
