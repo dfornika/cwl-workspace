@@ -17,7 +17,7 @@ inputs:
       position: 1
 outputs:
   - id: output
-    type: File?
+    type: File
     outputBinding:
       glob: output
 label: mash_dist
