@@ -26,7 +26,7 @@ outputs:
     type: Directory
   - id: mash_dist_output
     outputSource: "head/output"
-    type: File?
+    type: File
 steps:
   - id: shovill
     in:
