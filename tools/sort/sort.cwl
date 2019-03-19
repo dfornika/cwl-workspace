@@ -14,7 +14,7 @@ inputs:
     type: string
     inputBinding:
       position: 0
-      prefix: '--key'
+      prefix: '-k'
   - id: general-numeric-sort
     type: boolean?
     inputBinding:
