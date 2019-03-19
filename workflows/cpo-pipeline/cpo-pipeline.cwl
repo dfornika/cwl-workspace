@@ -62,8 +62,7 @@ steps:
   - id: mash_dist
     in:
       - id: reference
-        source:
-          - refseq_genomes_k21_s1000_msh
+        source: refseq_genomes_k21_s1000_msh
       - id: query
         source:
           - mash_sketch/output
