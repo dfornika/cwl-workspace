@@ -9,7 +9,7 @@ inputs:
     inputBinding:
       position: 1
   - id: reference
-    type: File
+    type: File?
     inputBinding:
       position: 0
       prefix: '-r'
