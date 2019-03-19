@@ -4,13 +4,16 @@ id: cpo_pipeline
 label: cpo-pipeline
 $namespaces:
   edam: "http://edamontology.org/"
+  s: https://schema.org/
 $schemas:
   - "http://edamontology.org/EDAM_1.16.owl"
 inputs:
   - id: reads2
     type: File
+    format: 'edam:format_1932'
   - id: reads1
     type: File
+    format: 'edam:format_1932'
   - id: refseq_genomes_k21_s1000_msh
     type: File
 outputs:
