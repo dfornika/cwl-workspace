@@ -23,6 +23,8 @@ inputs:
 outputs:
   - id: output
     type: File
+    outputBinding:
+      glob: output
 label: sort
 requirements:
   - class: DockerRequirement
