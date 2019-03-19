@@ -1,7 +1,9 @@
 class: CommandLineTool
 cwlVersion: v1.0
 $namespaces:
-  sbg: 'https://www.sevenbridges.com'
+  s: https://schema.org/
+$schemas:
+ - https://schema.org/docs/schema_org_rdfa.html
 id: mash_screen
 baseCommand:
   - mash
@@ -10,7 +12,7 @@ inputs:
   - id: queries
     type: File
   - id: pool
-    type: 'File[]'
+    type: File
 outputs: []
 label: mash_screen
 arguments:
