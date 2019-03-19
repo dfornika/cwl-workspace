@@ -1,7 +1,5 @@
 class: CommandLineTool
 cwlVersion: v1.0
-$namespaces:
-  sbg: 'https://www.sevenbridges.com'
 id: mash_dist
 baseCommand:
   - mash
@@ -30,6 +28,7 @@ arguments:
     valueFrom: '1.0'
 requirements:
   - class: DockerRequirement
-    dockerPull: 'quay.io/biocontainers/mash:2.0--h9dd4a16_3'
+    dockerPull: 'biocontainers/mash:2.1--hf69f6b5_1'
+    dockerImageId: 'biocontainers/mash:2.1--hf69f6b5_1'
   - class: InlineJavascriptRequirement
 stdout: output
