@@ -1,7 +1,5 @@
 class: CommandLineTool
 cwlVersion: v1.0
-$namespaces:
-  sbg: 'https://www.sevenbridges.com'
 id: shovill
 baseCommand:
   - shovill
@@ -44,3 +42,9 @@ requirements:
   - class: DockerRequirement
     dockerPull: 'quay.io/biocontainers/shovill:1.0.1--0'
   - class: InlineJavascriptRequirement
+hints:
+  SoftwareRequirement:
+    packages:
+      shovill:
+        specs: [ "https://identifiers.org/rrid/RRID:SCR_017077" ]
+        version: [ "1.0.1" ]
