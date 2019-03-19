@@ -1,7 +1,5 @@
 class: CommandLineTool
 cwlVersion: v1.0
-$namespaces:
-  sbg: 'https://www.sevenbridges.com/'
 id: fastqc
 baseCommand:
   - fastqc
@@ -22,7 +20,8 @@ arguments:
     valueFrom: output
 requirements:
   - class: DockerRequirement
-    dockerPull: 'quay.io/biocontainers/fastqc:0.11.8--1'
+    dockerImageId: 'biocontainers/fastqc:0.11.8--1'
+    dockerPull: 'biocontainers/fastqc:0.11.8--1'
   - class: InitialWorkDirRequirement
     listing:
       - entryname: output
