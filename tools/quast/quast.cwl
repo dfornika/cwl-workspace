@@ -25,6 +25,6 @@ arguments:
     valueFrom: output
 requirements:
   - class: DockerRequirement
-    dockerPull: 'quay.io/biocontainers/quast:5.0.2--py35pl526ha92aebf_0'
-    dockerImageId: 'quay.io/biocontainers/quast:5.0.2--py35pl526ha92aebf_0'
+    dockerPull: 'quay.io/biocontainers/quast:5.0.1--py36pl526ha92aebf_0'
+    dockerImageId: 'quay.io/biocontainers/quast:5.0.1--py36pl526ha92aebf_0'
   - class: InlineJavascriptRequirement
