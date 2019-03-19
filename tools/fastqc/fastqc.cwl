@@ -20,8 +20,8 @@ arguments:
     valueFrom: output
 requirements:
   - class: DockerRequirement
-    dockerImageId: 'biocontainers/fastqc:0.11.8--1'
-    dockerPull: 'biocontainers/fastqc:0.11.8--1'
+    dockerImageId: 'quay.io/biocontainers/fastqc:0.11.8--1'
+    dockerPull: 'quay.io/biocontainers/fastqc:0.11.8--1'
   - class: InitialWorkDirRequirement
     listing:
       - entryname: output
