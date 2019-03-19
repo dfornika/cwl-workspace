@@ -16,5 +16,6 @@ outputs:
 label: abricate
 requirements:
   - class: DockerRequirement
-    dockerPull: 'quay.io/biocontainers/abricate:0.8.10--h1341992_0'
+    dockerPull: 'biocontainers/abricate:0.8.10--h1341992_0'
+    dockerImageId:  'biocontainers/abricate:0.8.10--h1341992_0'
 stdout: output
