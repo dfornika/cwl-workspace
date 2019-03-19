@@ -14,10 +14,10 @@ outputs:
     outputSource: "mlst/output"
     type: File
   - id: fastqc_R1_output
-    outputSource: "fastqc/output"
+    outputSource: "fastqc_reads1/output"
     type: Directory
   - id: fastqc_R2_output
-    outputSource: "fastqc_1/output"
+    outputSource: "fastqc_reads2/output"
     type: Directory
   - id: quast_output
     outputSource: "quast/output"
@@ -89,7 +89,7 @@ steps:
       - id: output
     run: https://raw.githubusercontent.com/dfornika/cwl-workspace/master/tools/sort/sort.cwl
     label: sort
-  - id: fastqc
+  - id: fastqc_reads1
     in:
       - id: input
         source:
@@ -98,7 +98,7 @@ steps:
       - id: output
     run: https://raw.githubusercontent.com/dfornika/cwl-workspace/master/tools/fastqc/fastqc.cwl
     label: fastqc
-  - id: fastqc_1
+  - id: fastqc_reads2
     in:
       - id: input
         source:
