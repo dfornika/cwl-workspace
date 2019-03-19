@@ -28,7 +28,7 @@ arguments:
     valueFrom: '1.0'
 requirements:
   - class: DockerRequirement
-    dockerPull: 'biocontainers/mash:2.1--hf69f6b5_1'
-    dockerImageId: 'biocontainers/mash:2.1--hf69f6b5_1'
+    dockerPull: 'quay.io/biocontainers/mash:2.1--hf69f6b5_1'
+    dockerImageId: 'quay.io/biocontainers/mash:2.1--hf69f6b5_1'
   - class: InlineJavascriptRequirement
 stdout: output
