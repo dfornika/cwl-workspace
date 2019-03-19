@@ -1,20 +1,15 @@
 class: CommandLineTool
 cwlVersion: v1.0
-$namespaces:
-  sbg: 'https://www.sevenbridges.com'
 id: quast
 baseCommand:
   - quast
 inputs:
   - id: contigs
-    type:
-      - File
-      - type: array
-        items: File
+    type: File
     inputBinding:
       position: 1
   - id: reference
-    type: File?
+    type: File
     inputBinding:
       position: 0
       prefix: '-r'
@@ -30,5 +25,6 @@ arguments:
     valueFrom: output
 requirements:
   - class: DockerRequirement
-    dockerPull: 'quay.io/biocontainers/quast:5.0.2--py35pl526ha92aebf_0'
+    dockerPull: 'biocontainers/quast:5.0.2--py35pl526ha92aebf_0'
+    dockerImageId: 'biocontainers/quast:5.0.2--py35pl526ha92aebf_0'
   - class: InlineJavascriptRequirement
