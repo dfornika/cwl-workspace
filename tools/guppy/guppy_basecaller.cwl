@@ -1,7 +1,5 @@
 class: CommandLineTool
 cwlVersion: v1.0
-$namespaces:
-  sbg: 'https://www.sevenbridges.com/'
 id: guppy_basecaller
 baseCommand:
   - guppy_basecaller
@@ -31,5 +29,6 @@ arguments:
     valueFrom: '--disable-pings'
 requirements:
   - class: DockerRequirement
-    dockerPull: 'genomicpariscentre/guppy:2.3.1'
+    dockerPull: 'genomicpariscentre/guppy:2.3.5'
+    dockerImageId: 'genomicpariscentre/guppy:2.3.5'
   - class: InlineJavascriptRequirement
