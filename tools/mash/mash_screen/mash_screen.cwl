@@ -22,5 +22,6 @@ arguments:
     valueFrom: $(inputs.pool.map(pool => pool.path).join(" "))
 requirements:
   - class: DockerRequirement
-    dockerPull: 'quay.io/biocontainers/mash:2.0--h9dd4a16_3'
+    dockerPull: 'quay.io/biocontainers/mash:2.1--hf69f6b5_1'
+    dockerImageId: 'quay.io/biocontainers/mash:2.1--hf69f6b5_1'
   - class: InlineJavascriptRequirement
