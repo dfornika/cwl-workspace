@@ -2,8 +2,6 @@ class: Workflow
 cwlVersion: v1.0
 id: cpo_pipeline
 label: cpo-pipeline
-$namespaces:
-  sbg: 'https://www.sevenbridges.com/'
 inputs:
   - id: reads2
     type: File
